@@ -1,4 +1,4 @@
-# 🎨 SketchFlow – Real-Time Collaborative Whiteboard
+# 🧠 SketchFlow – Real-Time Collaborative Whiteboard
 
 SketchFlow is a full-featured, real-time collaborative whiteboard application inspired by tools like Miro. It allows multiple users to interact, draw, and collaborate on a shared canvas with advanced features like layers, real-time synchronization, authentication, and organizational workspaces.
 
@@ -6,7 +6,7 @@ Built using modern technologies, SketchFlow demonstrates scalable frontend archi
 
 ---
 
-## 🌟 Overview
+## 🚀 Overview
 
 SketchFlow is designed as a collaborative platform where users can visually brainstorm, plan, and create together in real time.
 
@@ -22,7 +22,7 @@ This project showcases:
 
 ## ✨ Core Features
 
-### Whiteboard System
+### 🛠️ Whiteboard System
 
 * Fully custom-built canvas from scratch
 * Smooth and responsive drawing experience
@@ -30,148 +30,138 @@ This project showcases:
 
 ---
 
-### Drawing & Tools
+### 🧰 Drawing & Tools
 
-* Pencil / Freehand drawing
-* Text tool
-* Shapes (Rectangles, Ellipses)
-* Sticky Notes
-* Selection & transformation tools
+* ✏️ Pencil / Freehand drawing
+* 🔤 Text tool
+* 🔷 Shapes (Rectangles, Ellipses)
+* 🗒️ Sticky Notes support
+* Selection and transformation tools
 
 ---
 
-### Layering System
+### 🧱 Layering System
 
 * Create and manage multiple layers
-* Multi-layer selection
-* Resize, move, and transform elements
-* Layer depth (z-index control)
+* Layer selection and multi-selection
+* Resize, move, and transform layers
+* Control layer depth (z-index handling)
 
 ---
 
-### Styling & Customization
+### 🎨 Styling & Customization
 
-* Color system for elements
+* Color system for shapes and drawings
 * Dynamic color updates
 * Clean and consistent UI
 
 ---
 
-### Undo / Redo
+### 🔁 Undo / Redo
 
-* Full history tracking
+* Full history tracking system
 * Efficient state management
-* Smooth action reversal
+* Smooth reversal of actions
 
 ---
 
-### Productivity Features
+### ⌨️ Productivity Features
 
-* Keyboard shortcuts
+* Keyboard shortcuts for faster workflow
 * Selection box & selection net
 * Drag, resize, and translate elements
 
 ---
 
-### Real-Time Collaboration
+### 🤝 Real-Time Collaboration
 
-* Multi-user simultaneous editing
+* Multiple users editing simultaneously
 * Live cursor presence
-* Instant updates across clients
-* Shared workspace environment
+* Real-time updates across all clients
+* Shared interactive workspace
 
 ---
 
-### Real-Time Database
+### 💾 Real-Time Database
 
 * Persistent board state
-* Instant synchronization
-* Reliable backend consistency
+* Instant syncing across users
+* Backend-powered data consistency
 
 ---
 
-### Authentication & Organizations
+### 🔐 Authentication & Organizations
 
-* Secure authentication system
+* Secure user authentication
 * Organization-based collaboration
-* Invite members to boards
-* Role-based access
+* Invite system for team access
+* Role-based workspace interaction
 
 ---
 
-### Additional Features
+### ⭐ Additional Features
 
 * Favoriting boards
 * Search functionality
-* Dashboard for board management
-* Sidebar & organization panel
+* Dashboard for managing boards
+* Sidebar navigation & organization panel
 
 ---
 
 ## 🛠️ Tech Stack
 
-* Next.js 14
-* TypeScript
-* Tailwind CSS
-* Shadcn UI
-* Convex (real-time database)
-* Liveblocks (collaboration & presence)
-* Clerk (authentication)
+* **Next.js 14** – Full-stack React framework
+* **TypeScript** – Type safety and scalability
+* **Tailwind CSS** – Utility-first styling
+* **Shadcn UI** – Modern UI components
+* **Convex** – Real-time database
+* **Liveblocks** – Real-time collaboration & presence
+* **Clerk** – Authentication and user management
 
 ---
 
 ## 🧠 System Design Highlights
 
-* Real-time sync powered by Liveblocks for low latency
-* Convex ensures consistent shared state
-* Layer-based architecture for scalable canvas operations
-* Presence system tracks active users and cursors
-* Clean separation of UI, state, and backend logic
+* **Real-time sync** powered by Liveblocks ensures low-latency updates
+* **Convex database** maintains consistent shared state
+* **Layer-based architecture** enables complex canvas interactions
+* **Presence system** tracks active users and cursors
+* **Separation of concerns** between UI, state, and networking
 
 ---
 
 ## 📂 Project Structure
 
-```
+```id="h9k2fp"
 src/
-│── app/                
-│── components/         
-│── canvas/             
-│── hooks/              
-│── store/              
-│── lib/                
-│── convex/             
-│── liveblocks/         
+│── app/                # Next.js app directory
+│── components/         # Reusable UI components
+│── canvas/             # Drawing & rendering logic
+│── hooks/              # Custom React hooks
+│── store/              # State management
+│── lib/                # Utilities & helpers
+│── convex/             # Backend (Convex functions)
+│── liveblocks/         # Real-time collaboration logic
 ```
 
 ---
 
 ## 🎯 Use Cases
 
-* Team brainstorming
-* Collaborative whiteboarding
-* Product planning
-* Teaching & learning tools
-
----
-
-## 🚀 Future Improvements
-
-* Voice/video collaboration
-* Export to PDF / SVG
-* Advanced drawing tools
-* Version history
-* Mobile optimization
+* Team brainstorming & whiteboarding
+* Collaborative design discussions
+* Product planning & ideation
+* Educational and teaching tools
 
 ---
 
 ## 🧑‍💻 Key Learnings
 
-* Building real-time collaborative apps
-* Managing shared state across users
-* Designing scalable frontend systems
-* Implementing layered rendering
-* Integrating authentication & backend services
+* Building real-time collaborative systems
+* Managing shared state across multiple users
+* Designing scalable frontend architecture
+* Implementing layer-based rendering
+* Integrating authentication and backend services
 
 ---
 
