@@ -1,4 +1,4 @@
-# 🧠 SketchFlow – Real-Time Collaborative Whiteboard
+# 🎨 SketchFlow – Real-Time Collaborative Whiteboard
 
 SketchFlow is a full-featured, real-time collaborative whiteboard application inspired by tools like Miro. It allows multiple users to interact, draw, and collaborate on a shared canvas with advanced features like layers, real-time synchronization, authentication, and organizational workspaces.
 
