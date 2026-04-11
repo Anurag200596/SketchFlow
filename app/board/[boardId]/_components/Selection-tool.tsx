@@ -103,7 +103,7 @@ const Selectiontool = memo(({
                 )`
             }
         }
-         className='absolute p-3 rounded-xl shadow-sm bg-white select-none border flex'>
+         className='fixed p-3 rounded-xl shadow-sm bg-white select-none border flex'>
           <ColorPicker
           onchange = {setFill}
           />

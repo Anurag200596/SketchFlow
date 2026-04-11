@@ -4,7 +4,7 @@ import React from 'react'
 
 const Loading = () => {
   return (
-    <div className="h-screen max-h-screen mt-80 w-full flex flex-col items-center justify-center">
+    <div className="h-screen max-h-screen w-full flex flex-col items-center justify-center">
         <Image 
         alt="logo"
         src="./logo.svg"
