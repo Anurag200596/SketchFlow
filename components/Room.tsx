@@ -17,7 +17,7 @@ interface RoomProps {
 
 export const Room = ({ children, roomId, fallback }: RoomProps) => {
   return (
-    <LiveblocksProvider  throttle={5} authEndpoint="/api/liveblocks-auth">
+    <LiveblocksProvider  throttle={16} authEndpoint="/api/liveblocks-auth">
       <RoomProvider
       initialStorage={
         {

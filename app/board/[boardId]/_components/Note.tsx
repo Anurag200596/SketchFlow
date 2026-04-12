@@ -63,7 +63,7 @@ const handleContentChange = (e:ContentEditableEvent) =>{
         width={width}
         onPointerDown={(e) => onPointerDown(e,id)}
         style={{
-            outline: selectionColor ? `1px solid ${selectionColor}` : "none",
+            outline: selectionColor ? `2px solid ${selectionColor}` : "none",
             background : fill ? colorToCss(fill) : "#000"
         }}
         className="shadow-md drop-shadow-xl"
