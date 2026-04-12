@@ -27,7 +27,7 @@ const SelectionBox = memo(({
     return (
         <>
             <rect
-                className='fill-transparent stroke-1 stroke-blue-600 pointer-events-none'
+                className='fill-transparent stroke-2 stroke-blue-600 pointer-events-none'
                 x={0}
                 y={0}
                 style={{

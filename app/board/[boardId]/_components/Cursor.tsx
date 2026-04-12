@@ -25,7 +25,7 @@ const Cursor = memo(({ connectionId }: CursorProps) => {
         <foreignObject
         style={
             {
-                transform : `translateX(${x}px) tranlateY(${y}px)`
+                transform : `translateX(${x}px) translateY(${y}px)`
             }
         }
         height={50}
@@ -40,13 +40,13 @@ const Cursor = memo(({ connectionId }: CursorProps) => {
               className="h-5 w-5">
 
             </MousePointer2>
-        </foreignObject>
-
         <div
         style={{backgroundColor : connectionIdToBorderColor(connectionId)}}
          className="absolute left-5 px-1.5 py-0.5 rounded-md text-xs text-white font-semibold">
             {name}
         </div>
+        </foreignObject>
+
 
         </>
     )

@@ -20,12 +20,10 @@ const Participants = () => {
             return(
               <UserAvatar
               key={connectionId}
-              borderColor= { connectionIdToBorderColor(connectionId)}
+              borderColor= {connectionIdToBorderColor(connectionId)}
               name={info?.name}
               src={info?.picture}
               fallback= {info?.name?.[0] || "T"}
-
-
               >
 
               </UserAvatar>

@@ -18,7 +18,13 @@ export const UserAvatar = ({src,name,fallback,borderColor} : userAvatarProps)=>{
         <Hint 
         label={name || "Teammate"} side="bottom" sideOffset={18}
         >
-            <Avatar className="h-8 w-8 border-2">
+            <Avatar
+            style={
+                {
+                    borderColor : borderColor
+                }
+            }
+             className="h-8 w-8 border-3">
                 <AvatarImage src={src}/>
                 <AvatarFallback className="text-xs font-semibold">
                     {fallback}

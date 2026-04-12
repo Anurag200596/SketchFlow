@@ -21,19 +21,23 @@ interface canvasProps {
   boardId: string
 }
 const Canvas = ({ boardId }: canvasProps) => {
-
+  
   const history = useHistory()
   const canUndo = useCanUndo()
   const canRedo = useCanRedo()
-
+  
   const MAX_LAYERS = 100
-
+  
   const layerIds = useStorage((root) => root.layerIds)
   const [lastUsedColor, setlastUsedColor] = useState<color>({
     r: 0,
     g: 0,
     b: 0
   });
+    const [canvasState, setCanvasState] = useState<canvasState>({
+      mode: canvasMode.None
+    }
+    );
 
   const pencilDraft = useSelf((me) => me.presence.pencilDraft)
 
@@ -47,7 +51,7 @@ const Canvas = ({ boardId }: canvasProps) => {
 
   // },[])
   const onWheel = useCallback((e: React.WheelEvent) => {
-    setcamera(prev => ({
+    setcamera((prev) => ({
       x: prev.x - e.deltaX,
       y: prev.y - e.deltaY
     }));
@@ -90,10 +94,7 @@ const Canvas = ({ boardId }: canvasProps) => {
 
   }, [lastUsedColor
   ])
-  const [canvasState, setCanvasState] = useState<canvasState>({
-    mode: canvasMode.None
-  }
-  );
+  
 
 
   const onPointerLeave = useMutation(({ setMyPresence }, e: React.PointerEvent) => {
@@ -282,22 +283,18 @@ const Canvas = ({ boardId }: canvasProps) => {
 
     const current = PointerEventToCanvasPoint(e, camera)
 
-    if (canvasState.mode == canvasMode.Pressing) {
-      startMultiSelection(current, canvasState.origin)
-    }
-    else if (canvasState.mode === canvasMode.Pencil) {
-      continueDrawing(current, e)
-    }
-    else if (canvasState.mode === canvasMode.SelectionNet) {
+    if (canvasState.mode === canvasMode.Pressing) {
+      startMultiSelection(current, canvasState.origin);
+    } else if (canvasState.mode === canvasMode.SelectionNet) {
       updateSelectionNet(current, canvasState.origin);
+    } else if (canvasState.mode === canvasMode.Translating) {
+      translateLayer(current);
+    } else if (canvasState.mode === canvasMode.Resizing) {
+      resizeLayer(current);
+    } else if (canvasState.mode === canvasMode.Pencil) {
+      continueDrawing(current, e);
     }
-    else if (canvasState.mode === canvasMode.Translating) {
-      translateLayer(current)
 
-    }
-    else if (canvasState.mode === canvasMode.Resizing) {
-      resizeLayer(current)
-    }
     setMyPresence({ cursor: current })
 
 
@@ -459,7 +456,7 @@ const Canvas = ({ boardId }: canvasProps) => {
       />
       <svg
         onWheel={onWheel}
-        onPointerMove={onPointerMove}
+        onPointerMove={(e) => onPointerMove(e)}
         onPointerLeave={onPointerLeave}
         onPointerUp={onPointerUp}
         onPointerDown={onPointerDown2}
